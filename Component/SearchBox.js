@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, Image,TextInput } from 'react-native';
 import { Text, View } from './Themed';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const { width, height } = Dimensions.get('window')
@@ -9,11 +9,11 @@ const SearchBox = (Props) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.box}>
-                <Ionicons size={15} style={{ color: "white" }} name="options-outline" />
+                <Icon size={15} style={{ color: "white" }} name="options-outline" />
             </TouchableOpacity>
             <TextInput style={styles.textInput}  placeholder={"نام رستوارن مورد نظرتان را بنویسید"}/>
             <TouchableOpacity>
-                <Ionicons size={20} style={{ color: "gray", marginRight: width * 0.03 }} name="ios-search" />
+                <Icon size={20} style={{ color: "gray", marginRight: width * 0.03 }} name="ios-search" />
             </TouchableOpacity>
         </View>
     );

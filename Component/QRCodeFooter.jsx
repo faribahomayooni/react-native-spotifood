@@ -4,7 +4,7 @@ import Colors from "../constants/Colors"
 import SpotifoodBoldText from '../components/SpotifoodBoldText'
 import SpotifoodText from '../components/SpotiFoodText'
 import constName from '../constants/ConstName'
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const { width, height } = Dimensions.get('window')
@@ -14,7 +14,7 @@ const QRCodeFooter = (Props) => {
             <View style={styles.TEXT}>
                 <SpotifoodText style={{ fontSize: width * 0.030, marginTop: width * 0.050 }} name={constName.ScanResturantQRCode} />
                 <TouchableOpacity style={{ marginTop: width * 0.05 }}>
-                    <Ionicons size={20} name="ios-chevron-back" style={{ color: "white", alignSelf: "center", marginRight: width * 0.180 }} />
+                    <Icon size={20} name="ios-chevron-back" style={{ color: "white", alignSelf: "center", marginRight: width * 0.180 }} />
                 </TouchableOpacity>
             </View>
             <View style={styles.backbutton}>

@@ -4,7 +4,7 @@ import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
 import SpotifoodBoldText from '../components/SpotifoodBoldText'
 import SpotifoodText from '../components/SpotiFoodText'
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native';
 
 
@@ -14,7 +14,7 @@ export default function Header(Props) {
         <View style={styles.container}>
                 <SpotifoodText name={"رستوران ایتالیایی وی کافه"} style={styles.Subtitle} />
             <TouchableOpacity onPress={Props.onPress}>
-                <Ionicons size={20} name="ios-arrow-forward" style={{ color: "white" }} />
+                <Icon size={20} name="ios-arrow-forward" style={{ color: "white" }} />
             </TouchableOpacity>
         </View>
     );

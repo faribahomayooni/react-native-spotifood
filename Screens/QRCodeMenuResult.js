@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, View, FlatList, TouchableOpacity, Text,ActivityIndicator,Image } from 'react-native';
-import MenuHeader from '../components/MenuHeader'
-import SubHeaderMenu from '../components/SubHeaderMenu'
-import MenuFoodList from '../components/MenuFoodList'
-import SpotiFoodText from '../components/SpotiFoodText'
+import MenuHeader from '../Component/MenuHeader'
+import SubHeaderMenu from '../Component/SubHeaderMenu'
+import MenuFoodList from '../Component/MenuFoodList'
+import SpotiFoodText from '../Component/SpotiFoodText'
 import {useState,useEffect} from 'react'
 import {getMenu} from '../Function/globalFunction'
 import  Colors  from '../constants/Colors';

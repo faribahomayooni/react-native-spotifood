@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Dimensions, StyleSheet, View, Image } from 'react-native';
 import Colors from "../constants/Colors"
 import QRHeader from '../Component/QRHeader'
-import QRCodeFooter from '../Component/QRCodeFooter'
+import QRCodeFooter from '../Component/QRHeader'
 import {StackScreenProps ,} from '@react-navigation/stack';
 const { width, height } = Dimensions.get('window')
 
@@ -14,8 +14,8 @@ Props.navigation.push("QRCode")
   // console.log(height)
   return (
     <View style={styles.container}>
-      <QRHeader />
-      <Image source={require('../assets/images/ScannerImage.png')} style={styles.ImageStyle}/>
+      <QRHeader/>
+      {/* <Image source={require('../asset/images/ScannerImage')} style={styles.ImageStyle}/> */}
       <QRCodeFooter onPress={onPress}/>
     </View>
   );

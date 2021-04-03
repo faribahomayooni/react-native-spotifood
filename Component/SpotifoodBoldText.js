@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, Image } from 'react-native';
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
 import { Text, View } from './Themed';
-import { Ionicons } from '@expo/vector-icons';
+
 
 const { width, height } = Dimensions.get('window')
 const SpotiFoodBoldText=(Props)=> {

@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
-import SpotifoodBoldText from '../components/SpotifoodBoldText'
-import SpotifoodText from '../components/SpotiFoodText'
-import { Ionicons } from '@expo/vector-icons';
+import SpotifoodBoldText from '../Component/SpotifoodBoldText'
+import SpotifoodText from '../Component/SpotiFoodText'
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native';
 
 
@@ -13,7 +13,7 @@ export default function Header(Props) {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={()=>Props.onPress}>
-                <Ionicons size={20} name="ios-close" style={{ color: "white" }} />
+                <Icon size={20} name="ios-close" style={{ color: "white" }} />
             </TouchableOpacity>
             <View style={styles.LOGO}>
                 <SpotifoodBoldText name={"Spotifood"} style={styles.title} />

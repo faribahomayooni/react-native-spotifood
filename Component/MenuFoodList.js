@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, Image, TouchableOpacity,View} from 'react-native';
 import Colors from "../constants/Colors"
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import SpotiFoodBoldText from './SpotifoodBoldText'
 import SpotiFoodext from './SpotiFoodText'
 import {useState} from 'react'
@@ -27,7 +27,7 @@ const MenuFoodList = (Props) => {
           {count !== 0 &&
           <View style={styles.star}>
           <TouchableOpacity  onPress={()=>setcount(count+1)}>
-            <Ionicons name="ios-add" size={15} style={{ color: "white", fontWeight: "bold" }} />
+            <Icon name="ios-add" size={15} style={{ color: "white", fontWeight: "bold" }} />
           </TouchableOpacity>
           <SpotiFoodext name={count} style={styles.text} />
           <TouchableOpacity  onPress={()=>setcount(count-1)}>

@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, Image, TouchableOpacity, ProgressBarAndroidComp
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
 import { Text, View } from './Themed';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import SpotiFoodBoldText from './SpotifoodBoldText'
 import SpotiFoodext from './SpotiFoodText'
 
@@ -15,13 +15,13 @@ export default function RestaurantSlider(Props) {
       <View style={[styles.shadow,Props.ImageStyle]}>
         <SpotiFoodBoldText name={"رستوران ارکیده"} />
         <View style={styles.star}>
-          <Ionicons size={12} style={styles.icons} name="ios-star" />
+          <Icon size={12} style={styles.icons} name="ios-star" />
           <SpotiFoodext name="4.7" style={styles.text} />
         </View>
         <SpotiFoodext name={"ایتالیایی|دریایی|فست فود|سالاد"} style={{ marginRight: width * 0.050 }} />
         <View style={[styles.location,{...Props.locationStyle}]}>
           <SpotiFoodext name="تجریش" style={{ fontSize: width * 0.020 }} />
-          <Ionicons size={15} style={{ color: "white", alignSelf: "flex-end" }} name="ios-location" />
+          <Icon size={15} style={{ color: "white", alignSelf: "flex-end" }} name="ios-location" />
         </View>
       </View>
     </TouchableOpacity>

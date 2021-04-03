@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-import Header from '../components/Header'
+import Header from '../Component/Header'
 import Colors from "../constants/Colors"
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import EditScreenInfo from '../Component/EditScreenInfo';
+import { Text, View } from '../Component/Themed';
 import { Dimensions } from 'react-native';
 const {width,height}=Dimensions.get('window')
 const PageContent=(Props)=> {
