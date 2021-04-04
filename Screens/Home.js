@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 import Colors from "../constants/Colors"
 import PageContent from './PageContent';
-import RestaurantSlider from '../components/RestaurantSlider'
+import RestaurantSlider from '../Component/RestaurantSlider'
 import { ScrollView } from 'react-native-gesture-handler';
-import FoodsIcon from "../components/FoodsIcon"
-import { View } from '../components/Themed';
-import SearchBox from '../components/SearchBox'
+import FoodsIcon from "../Component/FoodsIcon"
+import { View } from '../Component/Themed. js';
+import SearchBox from '../Component/SearchBox'
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import SpotiFoodBoldText from '../components/SpotifoodBoldText';
+import SpotiFoodBoldText from '../Component/SpotifoodBoldText';
 
 
 const { width, height } = Dimensions.get('window')

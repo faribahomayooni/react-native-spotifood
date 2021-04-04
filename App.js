@@ -18,11 +18,11 @@ export default function App() {
 
   const [splash, setSplash] = useState(true);
   // const [fontsLoaded, setfontsLoaded] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setSplash(false);
-  //   }, 30);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setSplash(false);
+    }, 30);
+  }, []);
 
 //   const loadFonts=async()=> {
 // return Font.loadAsync({
@@ -44,15 +44,8 @@ export default function App() {
   //   return null;
   // } else {
     return (
-      <View>
-         <Navigation  />
-         {/* {  splash ? 
-            (<View style={{backgroundColor:"black"}}>
-            <Image style={{resizeMode:"stretch",width:width,height:height}} source={require('./assets/images/splash.png')} />
-            </View>):    
-           
-          } */}
-         {/* <StatusBar />  */}
+      <View>  
+           <Navigation/>    
       </View>
     );
   // }

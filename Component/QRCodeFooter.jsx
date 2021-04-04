@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, View, Image } from 'react-native';
 import Colors from "../constants/Colors"
-import SpotifoodBoldText from '../components/SpotifoodBoldText'
-import SpotifoodText from '../components/SpotiFoodText'
+import SpotifoodBoldText from '../Component/SpotifoodBoldText'
+import SpotifoodText from '../Component/SpotiFoodText'
 import constName from '../constants/ConstName'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';

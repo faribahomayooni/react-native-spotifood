@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Dimensions, StyleSheet,View } from 'react-native';
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
-import  SpotifoodBoldText from '../components/SpotifoodBoldText'
-import  SpotifoodText from '../components/SpotiFoodText'
+import  SpotifoodBoldText from '../Component/SpotifoodBoldText'
+import  SpotifoodText from '../Component/SpotiFoodText'
 
 
 const {width,height}=Dimensions.get('window')

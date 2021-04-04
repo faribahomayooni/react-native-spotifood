@@ -13,7 +13,7 @@ export default function Header(Props) {
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={()=>Props.onPress}>
-                <Icon size={20} name="ios-close" style={{ color: "white" }} />
+                {/* <Icon size={20} name="ios-close" style={{ color: "white" }} /> */}
             </TouchableOpacity>
             <View style={styles.LOGO}>
                 <SpotifoodBoldText name={"Spotifood"} style={styles.title} />

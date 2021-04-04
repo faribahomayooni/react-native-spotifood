@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dimensions, StyleSheet, View, Image,ScrollView } from 'react-native';
 import Colors from "../constants/Colors"
-import FoodsIcon from '../components/FoodsIcon'
+import FoodsIcon from '../Component/FoodsIcon'
 const { width, height } = Dimensions.get('window')
 const FoodsList =
   [{id:0, url: require(`../assets/images/coffee-64.png`) },

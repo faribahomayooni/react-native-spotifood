@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet, Image, TouchableOpacity, ProgressBarAndroidComponent } from 'react-native';
+import { Dimensions, StyleSheet, Image, TouchableOpacity, ProgressBarAndroidComponent ,View} from 'react-native';
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
-import { Text, View } from './Themed';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import SpotiFoodBoldText from './SpotifoodBoldText'
 import SpotiFoodext from './SpotiFoodText'

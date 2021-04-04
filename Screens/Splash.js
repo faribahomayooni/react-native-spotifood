@@ -1,54 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
+import { StyleSheet, Text, View,Image,Dimension } from 'react-native';
 
-export default class App extends React.Component {
-  state = {
-    appIsReady: false,
-  };
+const {width,height}=Dimension.get('window')
 
-  async componentDidMount() {
-    // Prevent native splash screen from autohiding
-    try {
-      await SplashScreen.preventAutoHideAsync();
-    } catch (e) {
-      console.warn(e);
-    }
-    this.prepareResources();
-  }
+export default class Splash extends React.Component {
+componentDidMount(){
+  setTimeout(() => {
+      this.props.navigation.replace('StartQRCode');
+  }, 1000)
+}
 
-  /**
-   * Method that serves to load resources and make API calls
-   */
-  prepareResources = async () => {
-    try {
-      await performAPICalls();
-      await downloadAssets();
-    } catch (e) {
-      console.warn(e);
-    } finally {
-      this.setState({ appIsReady: true }, async () => {
-        await SplashScreen.hideAsync();
-      });
-    }
-  };
 
   render() {
-    if (!this.state.appIsReady) {
-      return null;
-    }
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>SplashScreen Demo! 👋</Text>
-      </View>
+      (<View style={{backgroundColor:"black"}}>
+            <Image style={{resizeMode:"stretch",width:width,height:height}} source={require('../assets/images/splash.png')} />
+       </View>)
     );
   }
 }
-
-// Put any code you need to prepare your app in these functions
-async function performAPICalls() {}
-async function downloadAssets() {}
 
 const styles = StyleSheet.create({
   container: {

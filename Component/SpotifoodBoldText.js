@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet, Image } from 'react-native';
+import { Dimensions, StyleSheet, Image ,Text} from 'react-native';
 import Colors from "../constants/Colors"
 import EditScreenInfo from './EditScreenInfo';
-import { Text, View } from './Themed';
+// import { Text, View } from './Themed.js';
 
 
 const { width, height } = Dimensions.get('window')

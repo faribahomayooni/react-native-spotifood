@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet, Image } from 'react-native';
-import { Text, View } from './Themed';
+import { Dimensions, StyleSheet, Image,Text } from 'react-native';
+// import { Text, View } from './Themed. js';
 
 const { width, height } = Dimensions.get('window')
 const SpotiFoodText=(Props)=> {

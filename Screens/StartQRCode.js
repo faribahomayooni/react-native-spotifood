@@ -15,7 +15,7 @@ Props.navigation.push("QRCode")
   return (
     <View style={styles.container}>
       <QRHeader/>
-      {/* <Image source={require('../asset/images/ScannerImage')} style={styles.ImageStyle}/> */}
+      <Image source={require('../assets/images/ScannerImage.png')} style={styles.ImageStyle}/>
       <QRCodeFooter onPress={onPress}/>
     </View>
   );

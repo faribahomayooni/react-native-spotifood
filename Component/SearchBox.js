@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Dimensions, StyleSheet, Image,TextInput } from 'react-native';
-import { Text, View } from './Themed';
+import { Dimensions, StyleSheet, Image,TextInput,Text,View } from 'react-native';
+// import { Text, View } from './Themed. js';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
