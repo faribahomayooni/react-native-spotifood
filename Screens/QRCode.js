@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button, ActivityIndicator ,Alert} from 'react-native';
+import { Text, View, StyleSheet, Button, ActivityIndicator ,Alert,TouchableOpacity,Linking} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
 import { Dimensions } from 'react-native';
@@ -14,39 +14,35 @@ const QRCode=(Props)=> {
   const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      (async () => {
-        const { status } = await BarCodeScanner.requestPermissionsAsync();
-        setHasPermission(status === 'granted');
-      })();
-    }, 1000);
+    // setTimeout(() => {
+    //   (async () => {
+    //     const { status } = await BarCodeScanner.requestPermissionsAsync();
+    //     setHasPermission(status === 'granted');
+    //   })();
+    // }, 1000);
 
   }, []);
 
-  const handleBarCodeScanned = ({ type, data }) => {
-    setScanned(true);
-    // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
-    // var d="https://menusite.ir/s/demo"
-    if(data.slice(0,19)==="https://menusite.ir"){
-    Props.navigation.push("QRCodeMenuResult",{name:data.slice(22,50)})}
-    else{
-      Alert.alert(
-        "",
-        "بارکد رستوران قابل شناسایی نیست",
-        [
-       
-          { text: "باشه", onPress: () => console.log("OK Pressed") }
-        ]
-      );
-    }  
-  }
-
-  if (hasPermission === null) {
-    return <View style={styles.lodingStyle}>
-      <SpotiFoodText name={ConstName.Loading}></SpotiFoodText>
-      <ActivityIndicator size={"large"} color={Colors.globalGreen} />
-    </View>;
-  }
+  onSuccess = e => {
+    console.log("show address ****",e)
+    // Linking.openURL(e.data).catch(err =>
+    //   console.error('An error occured', err)
+    // );
+    if(e.data.slice(0,19)==="https://menusite.ir"){
+      Props.navigation.push("QRCodeMenuResult",{name:e.data.slice(22,50)})}
+      else{
+        Alert.alert(
+          "",
+          "بارکد رستوران قابل شناسایی نیست",
+          [
+         
+            { text: "باشه", onPress: () => console.log("OK Pressed") }
+          ]
+        );
+      } 
+    }
+    
+  
   if (hasPermission === false) {
     return <View style={styles.lodingStyle}>
       <SpotiFoodText name={ConstName.NoAccessCamera}></SpotiFoodText>
@@ -55,24 +51,12 @@ const QRCode=(Props)=> {
 
   return (
     <PageContent>
-      <View style={styles.container}>
+      {/* <View style={styles.container}> */}
       <QRCodeScanner
-        onRead={this.onSuccess}
-        flashMode={RNCamera.Constants.FlashMode.torch}
-        topContent={
-          <Text style={styles.centerText}>
-            Go to{' '}
-            <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on
-            your computer and scan the QR code.
-          </Text>
-        }
-        bottomContent={
-          <TouchableOpacity style={styles.buttonTouchable}>
-            <Text style={styles.buttonText}>OK. Got it!</Text>
-          </TouchableOpacity>
-        }
+        onRead={(e)=>onSuccess(e)}
+        // flashMode={RNCamera.Constants.FlashMode.torch}
       />
-      </View>
+      {/* </View> */}
     </PageContent>
   );
 }
@@ -80,7 +64,7 @@ const QRCode=(Props)=> {
 export default QRCode
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
+    // flexDirection: "row",
     width: width,
     height: width * 0.80,
     borderRadius: 30,
@@ -88,7 +72,8 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: width * 0.60
+    // marginTop: width * 0.60,
+    alignSelf:"center"
   },
   lodingStyle: {
     backgroundColor: Colors.mainBackground,

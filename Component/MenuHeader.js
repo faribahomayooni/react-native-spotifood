@@ -14,7 +14,7 @@ export default function Header(Props) {
         <View style={styles.container}>
                 <SpotifoodText name={"رستوران ایتالیایی وی کافه"} style={styles.Subtitle} />
             <TouchableOpacity onPress={Props.onPress}>
-                <Icon size={20} name="ios-arrow-forward" style={{ color: "white" }} />
+                <Icon size={20} name="chevron-right" style={{ color: "white" }} />
             </TouchableOpacity>
         </View>
     );

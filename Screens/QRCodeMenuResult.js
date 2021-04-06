@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     marginTop: width * 0.073,
     minHeight: height,
-    paddingBottom: width * 0.40
+    paddingBottom: width * 0.50
   },
   footer: {
     padding: 10,

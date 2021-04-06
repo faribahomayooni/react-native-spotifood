@@ -44,9 +44,8 @@ export default function App() {
   //   return null;
   // } else {
     return (
-      <View>  
+        
            <Navigation/>    
-      </View>
+ 
     );
-  // }
 }

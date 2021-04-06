@@ -18,14 +18,8 @@ import QRCodeMenuResult from '../Screens/QRCodeMenuResult'
 export default function Navigation() {
   const Stack = createStackNavigator();
   return (
-    <NavigationContainer initialRouteName="Splash"  keyboardHandlingEnabled={true}
-    headerMode={'none'}>
-        <Stack.Navigator screenOptions={{
-    headerShown: false
-  }} >
-           <Stack.Screen name="Splash" component={Splash}  />
-           <Stack.Screen name="StartQRCode" component={StartQRCode}  />
-       </Stack.Navigator>
+    <NavigationContainer   keyboardHandlingEnabled={true}>
+         {RootNavigator()}
     </NavigationContainer>
   );
 }
@@ -35,12 +29,14 @@ export default function Navigation() {
 
 
 function RootNavigator() {
+  const Stack = createStackNavigator();
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+<Stack.Navigator headerMode={'none'} initialRouteName="Splash">
+      <Stack.Screen name="Splash" component={Splash}  />
       <Stack.Screen name="StartQRCode" component={StartQRCode}  />
-       {/* <Stack.Screen name="QRCodeMenuResult" component={QRCodeMenuResult}  />
-      <Stack.Screen name="QRCode" component={QRCode} />
-   <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />  */}
-    </Stack.Navigator>
-  );
+      <Stack.Screen name="QRCodeMenuResult" component={QRCodeMenuResult}  />
+       <Stack.Screen name="QRCode" component={QRCode} />
+       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} /> 
+</Stack.Navigator>
+  )
 }

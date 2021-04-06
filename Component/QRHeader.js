@@ -12,9 +12,12 @@ const { width, height } = Dimensions.get('window')
 export default function Header(Props) {
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={()=>Props.onPress}>
-                {/* <Icon size={20} name="ios-close" style={{ color: "white" }} /> */}
-            </TouchableOpacity>
+            <Icon.Button
+              name="close"
+              backgroundColor={Colors.mainBackground}
+             >  
+           </Icon.Button>
+            {/* </TouchableOpacity> */}
             <View style={styles.LOGO}>
                 <SpotifoodBoldText name={"Spotifood"} style={styles.title} />
                 <SpotifoodText name={"restaurant Menu"} style={styles.Subtitle} />
